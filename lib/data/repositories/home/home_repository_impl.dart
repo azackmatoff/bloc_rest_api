@@ -23,4 +23,10 @@ class HomeRepositoryImpl extends HomeRepository {
   Future<List<PhotoModel>> getPhotos() async {
     return _homeServices.getPhotos();
   }
+
+  @override
+  Future<bool> deletPhotos() {
+    // TODO: implement deletPhotos
+    throw UnimplementedError();
+  }
 }

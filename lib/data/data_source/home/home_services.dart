@@ -7,10 +7,10 @@ class HomeServices {
     final _users = <UserModel>[];
     final _response = await HttpUtil.get('users');
 
-    if ((_response as Map).isEmpty) {
+    if ((_response as List).isEmpty) {
       return _users;
     } else {
-      for (final _data in _response as List) {
+      for (final _data in _response) {
         UserModel _userModel =
             UserModel.fromJson(_data as Map<String, dynamic>);
 
